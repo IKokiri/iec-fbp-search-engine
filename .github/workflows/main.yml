@@ -12,13 +12,13 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Validar arquivos composer.[json|lock]
-      run: cd 01-composer && composer validate
+      run: composer validate
 
     - name: Instalar dependências
-      run: cd 01-composer && composer install --prefer-dist --no-progress --no-suggest
+      run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Testes unitários
-      run: cd 01-composer && composer run-script test
+      run: composer run-script test
 
     - name: Executar pesquia
-      run: cd 01-composer && php app search "symfony"
+      run: php app search "symfony"

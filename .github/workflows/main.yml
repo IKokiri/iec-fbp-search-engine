@@ -12,13 +12,13 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Validar arquivos composer.[json|lock]
-      run: cd iec-fbp-search-engine && composer validate
+      run: cd ../../iec-fbp-search-engine && composer validate
 
     - name: Instalar dependências
-      run: cd iec-fbp-search-engine && composer install --prefer-dist --no-progress --no-suggest
+      run: cd ../../iec-fbp-search-engine && composer install --prefer-dist --no-progress --no-suggest
 
     - name: Testes unitários
-      run: cd iec-fbp-search-engine && composer run-script test
+      run: cd ../../iec-fbp-search-engine && composer run-script test
 
     - name: Executar pesquia
-      run: cd iec-fbp-search-engine && php app search "symfony"
+      run: cd ../../iec-fbp-search-engine && php app search "symfony"

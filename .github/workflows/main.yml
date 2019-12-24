@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Validar arquivos composer.[json|lock]
-      run: cd ../../iec-fbp-search-engine && composer validate
+      run: cd ../../iec-fbp-search-engine && composer validate --working-dir ../../
 
     - name: Instalar dependências
       run: cd ../../iec-fbp-search-engine && composer install --prefer-dist --no-progress --no-suggest

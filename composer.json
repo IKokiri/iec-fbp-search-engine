@@ -1,6 +1,6 @@
 {
     "name":"luizmendes/searchengine",
-    "description":"maquina de busca"
+    "description":"maquina de busca",
     "autoload": {
         "psr-4": {
             "App\\": "src"

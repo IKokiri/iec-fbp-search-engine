@@ -21,4 +21,4 @@ jobs:
       run: composer run-script test
 
     - name: Executar pesquia
-      run: php app search "symfony"
+      run: php app.php search "symfony"
